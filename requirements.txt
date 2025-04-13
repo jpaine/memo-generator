@@ -1,8 +1,13 @@
+cat > requirements.txt << EOL
 streamlit==1.28.2
-openai
-langchain
-crewai
-python-dotenv
-portkey-ai
+openai==1.14.2
+langchain==0.1.0
+crewai==0.28.0
+python-dotenv==1.0.0
+portkey-ai==1.12.0
 altair==5.1.2
-pyarrow
+pyarrow==15.0.0
+chromadb==0.4.18
+tiktoken==0.5.2
+instructor==0.4.5
+EOL
