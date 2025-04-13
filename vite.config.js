@@ -5,8 +5,18 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    proxy: {
+      '/upload': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+      '/download': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      }
+    }
   },
-  publicDir: 'public',  // This was missing in my previous response
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

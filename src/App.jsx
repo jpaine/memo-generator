@@ -196,7 +196,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Flybridge Investment Memorandum Generator</h1>
+      <h1 className="app-title">GGV Brain Investment Memorandum Generator</h1>
       <div className="content-wrapper">
         <CompanyLogo />
         <div className="description">
