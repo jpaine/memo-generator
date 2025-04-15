@@ -58,4 +58,4 @@ args = "npm install"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npm run dev"
+args = "concurrently \"node index.js\" \"npm run build && vite --host 0.0.0.0\""
