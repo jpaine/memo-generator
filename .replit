@@ -26,7 +26,6 @@ start = "typescript-language-server --stdio"
 [[ports]]
 localPort = 3000
 externalPort = 80
-exposeLocalhost = true
 
 [[ports]]
 localPort = 3001
@@ -58,4 +57,8 @@ args = "npm install"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "concurrently \"node index.js\" \"npm run build && vite --host 0.0.0.0\""
+args = "npm run build"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "concurrently \"node index.js\" \"vite --host 0.0.0.0\""
