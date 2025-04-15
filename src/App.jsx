@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import FileUpload from "./components/FileUpload";
-import DealTerms from "./components/DealTerms";
+import DealTerms from "./components/DealTerms";  // Importing DealTerms component
 import FounderInfo from "./components/FounderInfo";
 import MemorandumDisplay from "./components/MemorandumDisplay";
 import LoadingIndicator from "./components/LoadingIndicator";
@@ -203,10 +203,10 @@ function App() {
           <br /><br />
           <p className="intro-text">
             <strong>
-              Flybridge is an early stage venture capital fund investing in our AI powered future. 
+              Golden Gate Ventures is an early stage venture capital fund investing operating in emerging ecosystems. 
               If you want to learn more you can visit our{' '}
               <a 
-                href="https://www.flybridge.com/" 
+                href="https://www.goldengate.vc/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flybridge-link"
@@ -220,7 +220,7 @@ function App() {
             <strong>Tool Overview</strong>
           </p>
           <p>
-            The Flybridge memo generator is an AI powered platform designed to quickly transform
+            The GGVBrain memo generator is an AI powered platform designed to quickly transform
             decks, business plans, and call notes into a first-draft VC
             investment memo. For Founders, we hope this will provide insights
             into how a VC firm might look at your business and streamline the
@@ -234,24 +234,13 @@ function App() {
             <strong>Limitations</strong>
           </p>
           <p>
-            The memo generator produces a strong initial draft addressing key investor considerations. However, it serves as a starting point rather than a fully polished memorandum, as human input is essential to refine nuance and exercise judgment. Additionally, the tool's reasoning is influenced by the limitations of OpenAI's o1 model and may reflect biases present in the input data. It is intended for informational purposes only. By submitting your data, you acknowledge that it may be reviewed by a Flybridge team member but will not be shared externally.
+            The memo generator produces a strong initial draft addressing key investor considerations. However, it serves as a starting point rather than a fully polished memorandum, as human input is essential to refine nuance and exercise judgment. Additionally, the tool's reasoning is influenced by the limitations of OpenAI's o1 model and may reflect biases present in the input data. We are continuously working to improve the tool and welcome your feedback.
           </p>
           <p>
-            <strong>Disclaimer</strong>
-          </p>
-          <p>
-            By submitting your data, you acknowledge that it may be reviewed by a Flybridge team member but will not be shared externally.
+           
           </p>
            <br /><br />
             <p>
-              You can find the Github repo and see source code in this{' '}
-              <a 
-                href="https://github.com/dforwardfeed/memo_generator" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flybridge-link"
-              >
-                link
               </a>
             </p>
         </div>
