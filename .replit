@@ -1,9 +1,8 @@
 run = "npm run dev"
-entrypoint = "index.js"
-modules = ["nodejs-20", "python-3.10"]
+modules = ["c-clang14", "cpp-clang14", "nodejs-20", "python-3.12"]
 
 [nix]
-channel = "stable-22_11"
+channel = "stable-24_05"
 
 [env]
 XDG_CONFIG_HOME = "/home/runner/.config"
@@ -39,8 +38,20 @@ externalPort = 3002
 
 [deployment]
 deploymentTarget = "cloudrun"
-run = ["sh", "-c", "npm run start"]
+run = ["sh", "-c", "npm run dev"]
 
 [auth]
 pageEnabled = false
 buttonEnabled = false
+
+[workflows]
+runButton = "Start Dev Server"
+
+[[workflows.workflow]]
+name = "Start Dev Server"
+author = 13011877
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
