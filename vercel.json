@@ -1,0 +1,28 @@
+cat > vercel.json << EOL
+{
+    "version": 2,
+    "builds": [
+      { 
+        "src": "vite.config.js", 
+        "use": "@vercel/static-build",
+        "config": { 
+          "distDir": "dist",
+          "buildCommand": "npm run build"
+        }
+      },
+      { 
+        "src": "main.py", 
+        "use": "@vercel/python",
+        "config": { 
+          "runtime": "python3.10"
+        }
+      },
+      { "src": "index.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "main.py" },
+      { "src": "/upload", "dest": "index.js" },
+      { "src": "/(.*)", "dest": "dist/index.html" }
+    ]
+}
+EOL
